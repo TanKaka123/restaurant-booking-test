@@ -1,0 +1,7 @@
+.body {
+  @apply col-start-2 col-end-4 bg-white border border-solid h-fit;
+}
+
+.body-order-container{
+  @apply col-start-4 col-end-5 gap-2 border border-solid bg-white h-fit;
+}
