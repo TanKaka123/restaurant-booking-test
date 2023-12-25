@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+exports.Admin = exports.Transaction = exports.DetailRestaurant = exports.ErrorPage = void 0;
+var _404_1 = require("./404");
+exports.ErrorPage = _404_1["default"];
+var detailRestaurant_1 = require("./detailRestaurant");
+exports.DetailRestaurant = detailRestaurant_1["default"];
+var transaction_1 = require("./transaction");
+exports.Transaction = transaction_1["default"];
+var admin_1 = require("./admin");
+exports.Admin = admin_1["default"];
