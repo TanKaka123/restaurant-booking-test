@@ -1,25 +1,30 @@
-import { useState } from "react";
 import Text from "./text";
-import { fontsize } from "../constants/style";
 import colors from "../constants/theme";
+import { fontsize } from "../constants/style";
+import { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { PiCurrencyDollarSimpleBold } from "react-icons/pi";
 
 interface CardProps {
-  prop: string;
+  address: string;
+  name: string;
+  thumbnail: string;
 }
 
-function Card({ prop }: CardProps) {
+function Card({ address, name, thumbnail }: CardProps) {
   const [hovered, setHovered] = useState(false);
   const redColor = colors.PRIMARY;
 
   return (
     <div className="relative flex max-w-[24rem] flex-col overflow-hidden gap-1 items-center bg-white bg-clip-border text-gray-700 shadow-md text-center pb-6 h-full w-full">
       <div className="relative  w-full h-4/6 flex-col items-end justify-center overflow-hidden text-left">
-        <div className="absolute inset-0 m-0 h-full w-full flex flex-col justify-end overflow-hidden rounded-none bg-transparent bg-[url('https://images.unsplash.com/photo-1552960562-daf630e9278b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
+        <div
+          className="absolute inset-0 m-0 h-full w-full flex flex-col justify-end overflow-hidden rounded-none bg-transparent bg-cover bg-center text-gray-700 shadow-none"
+          style={{ backgroundImage: `url(${thumbnail})` }}
+        >
           <div className="absolute  w-full to-bg-black-10 bg-gradient-to-t bg-black-rgba h-2/5 flex flex-col justify-between p-2">
             <Text color={colors.WHITE} bold ellipsis>
-              How we design and codesadsdas dasdasd
+              {name}
             </Text>
             <div className="flex ">
               <FaStar className="text-yellow-300" />
@@ -35,7 +40,7 @@ function Card({ prop }: CardProps) {
               <PiCurrencyDollarSimpleBold className="text-orange-500" />
             </div>
             <Text ellipsis color={colors.WHITE} size={fontsize.SMALL}>
-              display name display name display name
+              {address}
             </Text>
           </div>
         </div>

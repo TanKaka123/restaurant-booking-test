@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, MouseEvent } from "react";
+import React, { FC } from "react";
 import colors from "../constants/theme";
 
 interface ButtonProps {
