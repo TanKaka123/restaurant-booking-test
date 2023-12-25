@@ -29,33 +29,30 @@ const Table: React.FC<TableProps> = ({ head, body }) => {
                       </tr>
                     </thead>
                     <tbody>
-                     
-                        {body &&
-                          body.map((itemParent, index) => {
-                            return (
-                              <tr className="border-b">
-                                {itemParent &&
-                                  itemParent.map((itemChildren, index) => {
-                                    return (
-                                      <th
-                                        scope="row"
-                                        className="text-sm font-normal px-6 py-4 whitespace-nowrap text-left"
-                                      >
-                                        <div className="flex flex-row items-center">
-                                        
-                                          <div className="ml-4">
-                                            <p className="mb-0.5 font-medium">
-                                              {itemChildren}
-                                            </p>
-                                          </div>
+                      {body &&
+                        body.map((itemParent, index) => {
+                          return (
+                            <tr className="border-b">
+                              {itemParent &&
+                                itemParent.map((itemChildren, index) => {
+                                  return (
+                                    <th
+                                      scope="row"
+                                      className="text-sm font-normal px-6 py-4 whitespace-nowrap text-left"
+                                    >
+                                      <div className="flex flex-row items-center">
+                                        <div className="ml-4">
+                                          <p className="mb-0.5 font-medium">
+                                            {itemChildren}
+                                          </p>
                                         </div>
-                                      </th>
-                                    );
-                                  })}
-                              </tr>
-                            );
-                          })}
-                    
+                                      </div>
+                                    </th>
+                                  );
+                                })}
+                            </tr>
+                          );
+                        })}
                     </tbody>
                   </table>
                 </div>

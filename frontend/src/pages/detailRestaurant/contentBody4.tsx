@@ -2,7 +2,6 @@ import { buttonSize, corner, fontsize, spacing } from "../../constants/style";
 import Text from "../../components/text";
 import { AiFillLike } from "react-icons/ai";
 import Button from "../../components/button";
-import CarouselBody from "./carouselBody";
 
 const ContentBody4 = () => {
   return (

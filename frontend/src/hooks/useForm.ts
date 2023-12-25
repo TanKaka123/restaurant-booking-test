@@ -9,7 +9,7 @@ const useForm = (initialState = {},) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   const setNewState = (newState: {}) => {
-    setFormData( newState)
+    setFormData(newState)
   }
   return { formData, handleInputChange, setNewState };
 };

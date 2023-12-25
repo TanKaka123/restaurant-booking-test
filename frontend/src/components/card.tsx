@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Text from "./text";
-import Button from "./button";
-import { buttonSize, fontsize } from "../constants/style";
+import { fontsize } from "../constants/style";
 import colors from "../constants/theme";
 import { FaStar } from "react-icons/fa";
 import { PiCurrencyDollarSimpleBold } from "react-icons/pi";
@@ -46,7 +45,7 @@ function Card({ prop }: CardProps) {
         <Text bold>
           <span className="text-red-600">Giảm 15%</span>{" "}
         </Text>
-        <Text color={colors.GRAY}>Gọi món Á - Âu</Text> 
+        <Text color={colors.GRAY}>Gọi món Á - Âu</Text>
         <button
           className="bg-transparent hover:bg-blue-500    hover:text-white py-2 px-4 border   hover:border-transparent rounded w-fit"
           style={{

@@ -16,7 +16,7 @@ interface FetchResult<T> {
     data: any | null;
     error: any;
     loading: boolean;
-    startFetching:any;
+    startFetching: any;
 }
 
 interface ActionUrlAPIParams {
@@ -129,8 +129,8 @@ export default function useFetch<T>(
         fetchData();
     }, [type, url, shouldFetch]);
 
-    const startFetching = () => { 
-        shouldFetch=true;
+    const startFetching = () => {
+        shouldFetch = true;
     }
 
     return { data, error, loading, startFetching };

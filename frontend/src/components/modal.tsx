@@ -1,7 +1,6 @@
 import { Button, Modal } from "flowbite-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import colors from "../constants/theme";
 
 const ModalComponent = () => {
   const [openModal, setOpenModal] = useState(true);

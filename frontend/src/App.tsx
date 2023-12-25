@@ -1,6 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
-import Button from "./components/button";
 import MainRoute from "./route";
 import LayoutWrapper from "./layout";
 

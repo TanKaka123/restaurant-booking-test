@@ -1,11 +1,13 @@
-import React from 'react';
-import { Carousel } from 'flowbite-react';
+import React from "react";
+import { Carousel } from "flowbite-react";
 
 interface CarouselDefaultProps {
-  listItemCarousel: string[] | null; // Assuming listItemCarousel is an array of string URLs
+  listItemCarousel: string[] | null;  
 }
 
-const CarouselDefault: React.FC<CarouselDefaultProps> = ({ listItemCarousel }) => {
+const CarouselDefault: React.FC<CarouselDefaultProps> = ({
+  listItemCarousel,
+}) => {
   return (
     <>
       <div className="h-56 sm:h-64 xl:h-80 2xl:h-96 rounded-none">

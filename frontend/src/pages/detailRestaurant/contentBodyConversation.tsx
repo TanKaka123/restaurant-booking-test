@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { corner, fontsize } from "../../constants/style";
 import { Text, Button, Input } from "../../components";
 import { adult_limit_array, children_limit_array } from "../../constants/data"; 

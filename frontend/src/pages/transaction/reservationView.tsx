@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Text } from "../../components";
+import { Text } from "../../components";
 import { corner, fontsize, spacing } from "../../constants/style";
 import ContentBodyConversation from "../detailRestaurant/contentBodyConversation";
 import { Restaurant } from "../../types/restaurant";
@@ -19,7 +19,7 @@ const ReservationView: React.FC<ReservationViewProps> = ({
   const [isEditable, setIsEditable] = useState(false);
   const toggleEditable = () => {
     // setIsEditable(!isEditable);
-    console.log('toggleEditable');
+    console.log("toggleEditable");
   };
 
   return (

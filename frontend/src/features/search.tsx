@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import colors from '../constants/theme';
+import React, { useState } from "react";
+import colors from "../constants/theme";
 import { FaLocationDot } from "react-icons/fa6";
 
 const SearchForm = () => {
@@ -12,7 +12,10 @@ const SearchForm = () => {
   return (
     <form>
       <div className="flex">
-        <label htmlFor="search-dropdown" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">
+        <label
+          htmlFor="search-dropdown"
+          className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+        >
           Your Email
         </label>
         <button
@@ -22,8 +25,8 @@ const SearchForm = () => {
           type="button"
           onClick={toggleDropdown}
         >
-          <FaLocationDot className='inline mr-4'/>
-Hồ Chí Minh
+          <FaLocationDot className="inline mr-4" />
+          Hồ Chí Minh
           <svg
             className="w-2.5 h-2.5 ms-2.5"
             aria-hidden="true"
@@ -31,10 +34,16 @@ Hồ Chí Minh
             fill="none"
             viewBox="0 0 10 6"
           >
-            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="m1 1 4 4 4-4"
+            />
           </svg>
         </button>
-    
+
         <div className="relative w-full">
           <input
             type="search"
@@ -46,21 +55,33 @@ Hồ Chí Minh
           <button
             type="submit"
             className="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white   rounded-e-lg border  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            style={{backgroundColor:colors.PRIMARY}}
+            style={{ backgroundColor: colors.PRIMARY }}
           >
-            <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            <svg
+              className="w-4 h-4"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+              />
             </svg>
             <span className="sr-only">Tìm kiếm</span>
           </button>
         </div>
       </div>
       <div
-          id="dropdown"
-          className={`z-10 ${isDropdownOpen ? '' : 'hidden'} bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700`}
-        >
-          
-        </div>
+        id="dropdown"
+        className={`z-10 ${
+          isDropdownOpen ? "" : "hidden"
+        } bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700`}
+      ></div>
     </form>
   );
 };

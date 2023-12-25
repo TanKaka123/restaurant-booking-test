@@ -1,6 +1,6 @@
 export interface Reservation {
     restaurant: {
-        title:string
+        title: string
     };
     numberAdult: number;
     numberChildren: number;
@@ -10,4 +10,4 @@ export interface Reservation {
     numberContact: string;
     EmailContact: string;
     note?: string;
-  }
+}

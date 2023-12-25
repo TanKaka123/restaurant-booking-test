@@ -1,10 +1,9 @@
 import { ReactNode, useState } from "react";
-import { Table } from "../../components";
 import RestaurantContent from "./restaurantContent";
 import ReservationContent from "./reservationContent";
 import { RiLogoutBoxLine, RiReservedFill } from "react-icons/ri";
 import { IoRestaurant } from "react-icons/io5";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const CategoryDashboard: React.FC<{ title: string }> = ({ title }) => {
   return (
@@ -55,9 +54,9 @@ const Admin = () => {
     },
   ];
 
-  const backToHome = () =>{
-    navigation("/")
-  }
+  const backToHome = () => {
+    navigation("/");
+  };
   return (
     <>
       <div className="fixed flex flex-col top-0 left-0 w-14 hover:w-64 md:w-64 bg-black dark:bg-gray-900 h-full text-white transition-all duration-300 border-none z-10 sidebar">
@@ -79,7 +78,11 @@ const Admin = () => {
                 );
               })}
             <CategoryDashboard title="log out" />
-            <ItemDashboard title="Log out" icon={<RiLogoutBoxLine />} action={backToHome} />
+            <ItemDashboard
+              title="Log out"
+              icon={<RiLogoutBoxLine />}
+              action={backToHome}
+            />
           </ul>
         </div>
       </div>

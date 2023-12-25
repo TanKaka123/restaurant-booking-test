@@ -3,7 +3,7 @@ import { Restaurant } from "./restaurant";
 export interface FormContact {
   nameContact: string;
   EmailContact: string;
-  numberContact?: string; 
+  numberContact?: string;
   note?: string;
 }
 export interface FormConversation {
@@ -19,7 +19,7 @@ export interface FormBookingConfirmation extends FormContact, FormConversation, 
 const InitialFormContact: FormContact = {
   nameContact: "",
   EmailContact: "",
-  numberContact: "", 
+  numberContact: "",
   note: ""
 }
 

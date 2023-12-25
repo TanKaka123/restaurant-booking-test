@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./carousel.css";
-// Data
 import { MdOutlineNavigateNext, MdOutlineArrowBackIos } from "react-icons/md";
 import Card from "./card";
 
