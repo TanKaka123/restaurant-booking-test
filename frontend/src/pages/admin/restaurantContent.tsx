@@ -2,7 +2,7 @@ import { Table } from "../../components";
 import { READ_RESTAURANT } from "../../constants/action";
 import useFetch, { actionUrlAPI } from "../../hooks/useFetch";
 import { Text } from "../../components";
-import { fontsize } from "../../constants/style"; 
+import { fontsize } from "../../constants/style";
 import { Restaurant } from "../../types/restaurant";
 
 const RestaurantContent = () => {
@@ -11,12 +11,7 @@ const RestaurantContent = () => {
   );
 
   const getHead = (): string[] => {
-    return [
-      "Tên nhà hàng",
-      "Địa chỉ",
-      "Giá thấp nhất",
-      "Giá cao nhất",
-    ];
+    return ["Tên nhà hàng", "Địa chỉ", "Giá thấp nhất", "Giá cao nhất"];
   };
   const getBody = (): string[][] => {
     var bodyTable: string[][] = [];

@@ -59,7 +59,7 @@ const DetailRestaurant: FC = () => {
             <div className="lg:col-start-2 lg:col-span-7 sm:col-start-2 sm:col-span-10 col-start-2 col-span-11">
               <CarouselBody listImage={data.thumbnail} />
             </div>
-            <div className="lg:col-start-9 lg:col-span-3 grid lg:grid-cols-2  gap-2 col-start-2 col-span-9 grid-cols-3 w-full">
+            <div className="lg:col-start-9 lg:col-span-3 sm:col-start-2 sm:col-span-10 grid lg:grid-cols-2  gap-2 col-start-2 col-span-11 grid-cols-3 ">
               <BannerList listImage={data.thumbnail}/>
             </div>
             <div

@@ -4,6 +4,7 @@ import { corner, fontsize, spacing } from "../../constants/style";
 import ContentBodyConversation from "../detailRestaurant/contentBodyConversation";
 import { Restaurant } from "../../types/restaurant";
 import { FormConversation } from "../../types/form";
+import DateFormatter from "../../utils/dateFormatter";
 
 interface ReservationViewProps {
   handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -59,7 +60,9 @@ const ReservationView: React.FC<ReservationViewProps> = ({
             <div className="border-solid border-0  border-b-2  pb-5">
               <Text size={fontsize.MEDIUM}>
                 {formReservationItem.dateArrival &&
-                  formReservationItem.dateArrival.toString()}{" "}
+                  DateFormatter(
+                    formReservationItem.dateArrival.toString()
+                  )}{" "}
                 {formReservationItem.hourArrival}
               </Text>
             </div>

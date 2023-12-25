@@ -4,6 +4,7 @@ import useFetch, { actionUrlAPI } from "../../hooks/useFetch";
 import { Text } from "../../components";
 import { fontsize } from "../../constants/style";
 import { Reservation } from "../../types/reservation";
+import DateFormatter from "../../utils/dateFormatter";
 
 const ReservationContent = () => {
   const { data, error, loading } = useFetch(
@@ -12,15 +13,15 @@ const ReservationContent = () => {
 
   const getHead = (): string[] => {
     return [
-      'Tên nhà hàng',
-      'Tên người đặt',
-      'Số điện thoại',
-      'Email',
-      'Người lớn',
-      'Trẻ em',
-      'Ngày đến',
-      'Giờ đến',
-      'Note',
+      "Tên nhà hàng",
+      "Tên người đặt",
+      "Số điện thoại",
+      "Email",
+      "Người lớn",
+      "Trẻ em",
+      "Ngày đến",
+      "Giờ đến",
+      "Note",
     ];
   };
   const getBody = (): string[][] => {
@@ -34,9 +35,9 @@ const ReservationContent = () => {
           item.EmailContact,
           item.numberAdult.toString(),
           item.numberChildren.toString(),
-          item.dateArrival,
+          DateFormatter(item.dateArrival),
           item.hourArrival,
-          item.note ?? ' ',
+          item.note ?? " ",
         ]);
       });
     }
